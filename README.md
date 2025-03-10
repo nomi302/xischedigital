@@ -147,7 +147,7 @@ X-API-Key: NjY4M2U1MDYtOGM0OC00ODIzLWI0OTgtNWQ2ZjI4MzQ0YjFj
 
 ## External Integration  
 This API integrates with the **Exchange Rate API**:  
-**Base URL:** `[https://open.er-api.com/v6/latest](https://v6.exchangerate-api.com)`
+**Base URL:** `(https://v6.exchangerate-api.com)`
 
 ---
 
