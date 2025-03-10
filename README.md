@@ -66,5 +66,57 @@ This sequence diagram shows the flow of API calls from client to services:
 
 
 
+   Configure environment variables (or update application.properties):
+
+properties
+Copy
+Edit
+exchange.rate.api.url=https://open.er-api.com/v6/latest
+exchange.rate.api.key=your_api_key_here
+Build and run the application:
+
+sh
+Copy
+Edit
+mvn clean install
+mvn spring-boot:run
+Running Tests & Coverage Reports
+Running Tests
+To execute unit and integration tests, run:
+
+sh
+Copy
+Edit
+mvn test
+Generating Test Coverage Reports
+To generate test coverage reports using JaCoCo, run:
+
+sh
+Copy
+Edit
+mvn clean verify
+The report will be available at:
+
+bash
+Copy
+Edit
+target/site/jacoco/index.html
+Coverage Report Screenshot
+For reference, here’s a sample coverage report:
+
+
+API Endpoints
+Method	Endpoint	Description
+POST	/calculate	Calculates the bill with discount
+GET	/exchange-rate?base=USD&target=EUR	Fetches exchange rate
+External Integration
+This API integrates with the Exchange Rate API:
+Base URL: https://open.er-api.com/v6/latest
+
+License
+MIT License. See LICENSE file for details.
+
+
+
 
    
