@@ -47,7 +47,8 @@ This sequence diagram shows the flow of API calls from client to services:
 ## 📌 Coverage Report  
 This sequence diagram shows the flow of API calls from client to services:
 
-![SSD](https://github.com/user-attachments/assets/f69aa76e-b378-4607-b9ca-9bd074924d2a)
+
+![Coverage Report](https://github.com/user-attachments/assets/b46b5145-959e-4fa3-b19b-dd97ae987b30)
 
 ---
 
