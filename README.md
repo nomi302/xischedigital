@@ -57,66 +57,78 @@ This sequence diagram shows the flow of API calls from client to services:
 ### Prerequisites
 - Install **Java 17** or later
 - Install **Maven** (`mvn`)
+- Install **Redis** (if using Redis for caching)
 
-### Running the Application
-1. Clone the repository:  
-   ```sh
-   git clone https://github.com/your-repo.git
-   cd your-repo
+### Configure Environment Variables
+To set up environment variables, update `application.properties`:
 
-
-
-   Configure environment variables (or update application.properties):
-
-properties
-Copy
-Edit
+```properties
 exchange.rate.api.url=https://open.er-api.com/v6/latest
 exchange.rate.api.key=your_api_key_here
-Build and run the application:
+```
 
-sh
-Copy
-Edit
+### Build and Run the Application
+To build and start the application, execute the following commands:
+
+```sh
 mvn clean install
 mvn spring-boot:run
-Running Tests & Coverage Reports
-Running Tests
+```
+
+---
+
+## Running Tests & Coverage Reports
+
+### Running Tests
 To execute unit and integration tests, run:
 
-sh
-Copy
-Edit
+```sh
 mvn test
-Generating Test Coverage Reports
-To generate test coverage reports using JaCoCo, run:
+```
 
-sh
-Copy
-Edit
+### Generating Test Coverage Reports
+To generate test coverage reports using **JaCoCo**, run:
+
+```sh
 mvn clean verify
+```
 The report will be available at:
 
-bash
-Copy
-Edit
+```
 target/site/jacoco/index.html
-Coverage Report Screenshot
+```
+
+### Coverage Report Screenshot  
 For reference, here’s a sample coverage report:
 
+![Coverage Report](https://github.com/user-attachments/assets/c1fcbccc-b5b6-479f-a2f2-122b8022b56f)
 
-API Endpoints
-Method	Endpoint	Description
-POST	/calculate	Calculates the bill with discount
-GET	/exchange-rate?base=USD&target=EUR	Fetches exchange rate
-External Integration
-This API integrates with the Exchange Rate API:
-Base URL: https://open.er-api.com/v6/latest
+---
 
-License
-MIT License. See LICENSE file for details.
+## API Endpoints
+| Method | Endpoint                               | Description                     |
+|--------|----------------------------------------|---------------------------------|
+| POST   | `/calculate`                           | Calculates the bill with discount |
+| GET    | `/exchange-rate?base=USD&target=EUR` | Fetches exchange rate          |
+
+---
+
+## External Integration  
+This API integrates with the **Exchange Rate API**:  
+**Base URL:** `https://open.er-api.com/v6/latest`
+
+---
+
+## License  
+Numan Tariq License. See `LICENSE` file for details.
+
+---
+
+## Diagrams Location  
+All the diagrams used in this documentation can be found in the `diagrams/` directory inside the project.
+
+---
+
+For any issues, feel free to open a ticket or reach out to the contributors.
 
 
-
-
-   
