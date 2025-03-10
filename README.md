@@ -57,7 +57,6 @@ This sequence diagram shows the flow of API calls from client to services:
 ### Prerequisites
 - Install **Java 17** or later
 - Install **Maven** (`mvn`)
-- Install **Redis** (if using Redis for caching)
 
 ### Configure Environment Variables
 To set up environment variables, update `application.properties`:
@@ -109,9 +108,42 @@ For reference, here’s a sample coverage report:
 | Method | Endpoint                               | Description                     |
 |--------|----------------------------------------|---------------------------------|
 | POST   | `/calculate`                           | Calculates the bill with discount |
-| GET    | `/exchange-rate?base=USD&target=EUR` | Fetches exchange rate          |
 
 ---
+
+
+## Sample Request & Response
+
+### **Request:**
+```json
+{
+  "items": [
+    {"category": "electronics", "price": 300},
+    {"category": "clothing", "price": 150}
+  ],
+  "userType": "employee",
+  "customerSince": "2019-05-15",
+  "originalCurrency": "USD",
+  "targetCurrency": "GBP"
+}
+```
+
+### **Response:**
+```json
+{
+  "netAmount": 232.05
+}
+```
+
+### **Request URL:**
+```
+http://localhost:8080/api/calculate
+```
+
+### **API Key (Header):**
+```
+X-API-Key: NjY4M2U1MDYtOGM0OC00ODIzLWI0OTgtNWQ2ZjI4MzQ0YjFj
+```
 
 ## External Integration  
 This API integrates with the **Exchange Rate API**:  
@@ -122,10 +154,6 @@ This API integrates with the **Exchange Rate API**:
 ## License  
 Numan Tariq License. See `LICENSE` file for details.
 
----
-
-## Diagrams Location  
-All the diagrams used in this documentation can be found in the `diagrams/` directory inside the project.
 
 ---
 
